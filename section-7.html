@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-03T13:28:03-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Section 2.3</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(    \newcommand{\avec}{{\mathbf a}}
+    \newcommand{\bvec}{{\mathbf b}}
+    \newcommand{\cvec}{{\mathbf c}}
+    \newcommand{\dvec}{{\mathbf d}}
+    \newcommand{\dtil}{\widetilde{\mathbf d}}
+    \newcommand{\evec}{{\mathbf e}}
+    \newcommand{\fvec}{{\mathbf f}}
+    \newcommand{\nvec}{{\mathbf n}}
+    \newcommand{\pvec}{{\mathbf p}}
+    \newcommand{\qvec}{{\mathbf q}}
+    \newcommand{\svec}{{\mathbf s}}
+    \newcommand{\tvec}{{\mathbf t}}
+    \newcommand{\uvec}{{\mathbf u}}
+    \newcommand{\vvec}{{\mathbf v}}
+    \newcommand{\wvec}{{\mathbf w}}
+    \newcommand{\xvec}{{\mathbf x}}
+    \newcommand{\yvec}{{\mathbf y}}
+    \newcommand{\zvec}{{\mathbf z}}
+    \newcommand{\rvec}{{\mathbf r}}
+    \newcommand{\mvec}{{\mathbf m}}
+    \newcommand{\zerovec}{{\mathbf 0}}
+    \newcommand{\onevec}{{\mathbf 1}}
+    \newcommand{\real}{{\mathbb R}}
+    \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+    \end{array}\right]}
+    \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+    \end{array}\right]}
+    \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+    \end{array}\right]}
+    \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+    \end{array}\right]}
+    \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+    \end{array}\right]}
+    \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+    \end{array}\right]}
+    \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+    #4 \\ #5 \\ \end{array}\right]}
+    \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+    #4 \\ #5 \\ \end{array}\right]}
+    \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+    \newcommand{\laspan}[1]{\text{Span}\{#1\}}
+    \newcommand{\bcal}{{\cal B}}
+    \newcommand{\ccal}{{\cal C}}
+    \newcommand{\scal}{{\cal S}}
+    \newcommand{\wcal}{{\cal W}}
+    \newcommand{\ecal}{{\cal E}}
+    \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+    \newcommand{\gray}[1]{\color{gray}{#1}}
+    \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+    \newcommand{\rank}{\text{rank}}
+    \newcommand{\row}{\text{Row}}
+    \newcommand{\col}{\text{Col}}
+    \renewcommand{\row}{\text{Row}}
+    \newcommand{\nul}{\text{Nul}}
+    \newcommand{\var}{\text{Var}}
+    \newcommand{\corr}{\text{corr}}
+    \newcommand{\len}[1]{\left|#1\right|}
+    \newcommand{\bbar}{\overline{\bvec}}
+    \newcommand{\bhat}{\widehat{\bvec}}
+    \newcommand{\bperp}{\bvec^\perp}
+    \newcommand{\xhat}{\widehat{\xvec}}
+    \newcommand{\vhat}{\widehat{\vvec}}
+    \newcommand{\uhat}{\widehat{\uvec}}
+    \newcommand{\what}{\widehat{\wvec}}
+    \newcommand{\Sighat}{\widehat{\Sigma}}
+    \newcommand{\circledNumber}[1]{\boxed{#1}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IC}{\mathbb{C}}
+\renewcommand{\P}{\mathcal{P}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\RREF}{\operatorname{RREF}}
+\newcommand{\vspan}{\operatorname{span}}
+\newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setBuilder}[2]{\left\{#1\,\middle|\,#2\right\}}
+\newcommand{\unknown}{\,{\color{gray}?}\,}
+\newcommand{\drawtruss}[2][1]{
+\begin{tikzpicture}[scale=#1, every node/.style={scale=#1}]
+\draw (0,0) node[left,magenta]{C} -- 
+      (1,1.71) node[left,magenta]{A} -- 
+      (2,0) node[above,magenta]{D} -- cycle;
+\draw (2,0) -- 
+      (3,1.71) node[right,magenta]{B} -- 
+      (1,1.71) -- cycle;
+\draw (3,1.71) -- (4,0) node[right,magenta]{E} -- (2,0) -- cycle;
+\draw[blue] (0,0) -- (0.25,-0.425) -- (-0.25,-0.425) -- cycle;
+\draw[blue] (4,0) -- (4.25,-0.425) -- (3.75,-0.425) -- cycle;
+\draw[thick,red,-&gt;] (2,0) -- (2,-0.75);
+#2
+\end{tikzpicture}
+}
+\newcommand{\trussNormalForces}{
+\draw [thick, blue,-&gt;] (0,0) -- (0.5,0.5);
+\draw [thick, blue,-&gt;] (4,0) -- (3.5,0.5);
+}
+\newcommand{\trussCompletion}{
+\trussNormalForces
+\draw [thick, magenta,&lt;-&gt;] (0.4,0.684) -- (0.6,1.026);
+\draw [thick, magenta,&lt;-&gt;] (3.4,1.026) -- (3.6,0.684);
+\draw [thick, magenta,&lt;-&gt;] (1.8,1.71) -- (2.2,1.71);
+\draw [thick, magenta,-&gt;] (1.6,0.684) -- (1.5,0.855);
+\draw [thick, magenta,&lt;-] (1.5,0.855) -- (1.4,1.026);
+\draw [thick, magenta,-&gt;] (2.4,0.684) -- (2.5,0.855);
+\draw [thick, magenta,&lt;-] (2.5,0.855) -- (2.6,1.026);
+}
+\newcommand{\trussCForces}{
+\draw [thick, blue,-&gt;] (0,0) -- (0.5,0.5);
+\draw [thick, magenta,-&gt;] (0,0) -- (0.4,0.684);
+\draw [thick, magenta,-&gt;] (0,0) -- (0.5,0);
+}
+\newcommand{\trussStrutVariables}{
+\node[above] at (2,1.71) {\(x_1\)};
+\node[left] at (0.5,0.866) {\(x_2\)};
+\node[left] at (1.5,0.866) {\(x_3\)};
+\node[right] at (2.5,0.866) {\(x_4\)};
+\node[right] at (3.5,0.866) {\(x_5\)};
+\node[below] at (1,0) {\(x_6\)};
+\node[below] at (3,0) {\(x_7\)};
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ula.html"><span class="title">TBIL Activities for Understanding Linear Algebra</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-6.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="TBILch2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-6.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="TBILch2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="TBILch1.html" data-scroll="TBILch1"><span class="codenumber">1</span> <span class="title">TBIL Activities: Systems of Equations</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1">Section 1.1</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Section 1.2</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Section 1.3</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Section 1.4</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TBILch2.html" data-scroll="TBILch2"><span class="codenumber">2</span> <span class="title">TBIL Activities: Vectors, Matrices, and Linear Combinations</span></a><ul>
+<li><a href="section-5.html" data-scroll="section-5">Section 2.1</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Section 2.2</a></li>
+<li><a href="section-7.html" data-scroll="section-7" class="active">Section 2.3</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Section 2.4</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-7"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Section 2.3</span>
+</h2>
+<article class="activity project-like" id="activity-37"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-174">If the equation \(A\xvec = \bvec\) is inconsistent, give the statement that best describes the pivots of the augmented matrix \(\left[\begin{array}{r|r} A \amp \bvec
+\end{array}\right]\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-138"><p id="p-175">There must be a pivot in the last row of the augmented matrix.</p></li>
+<li id="li-139"><p id="p-176">There must be a pivot in the last column of the augmented matrix.</p></li>
+<li id="li-140"><p id="p-derived-li-140">The augmented matrix must be the identity matrix.</p></li>
+<li id="li-141"><p id="p-177">We can't determine anything about the pivots without the specific matrix.</p></li>
+</ol></article><article class="activity project-like" id="activity-38"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
+<ol id="p-178" class="lower-alpha">
+<li id="li-142">
+<p id="p-179">Consider the matrix \(A\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \left[
+\begin{array}{rrr}
+1 \amp 0 \amp -2 \\
+-2 \amp 2 \amp 2 \\
+1 \amp 1 \amp -3
+\end{array}\right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If \(\bvec=\threevec{2}{2}{5}\text{,}\) is the equation \(A\xvec = \bvec\) consistent?  If so, find a solution. <div class="sagecell-sage" id="sage-10"><script type="text/x-sage">
+</script></div></p>
+</li>
+<li id="li-143"><p id="p-180">If \(\bvec=\threevec{2}{2}{6}\text{,}\) is the equation \(A\xvec = \bvec\) consistent?  If so, find a solution. <div class="sagecell-sage" id="sage-11"><script type="text/x-sage">
+</script></div></p></li>
+<li id="li-144"><p id="p-181">Identify the pivot positions of \(A\text{.}\)</p></li>
+<li id="li-145">
+<p id="p-182">For our two choices of the vector \(\bvec\text{,}\) one equation \(A\xvec = \bvec\) has a solution and the other does not.  What feature of the pivot positions of the matrix \(A\) tells us to expect this?</p>
+<ol class="lower-alpha">
+<li id="li-146"><p id="p-183">There is a row of the coefficient matrix with no pivot position.</p></li>
+<li id="li-147"><p id="p-184">There is column of the coefficient matrix with no pivot position.</p></li>
+<li id="li-148"><p id="p-derived-li-148">The coefficient matrix is not the identity matrix.</p></li>
+<li id="li-149"><p id="p-185">We can't determine anything about the pivot positions without the specific matrix.</p></li>
+</ol>
+</li>
+</ol></article><p id="p-186">Let's look at two examples to develop some intuition for the concept of span.</p>
+<article class="activity project-like" id="activity-intro-span"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-187">Consider the set of vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec = \twovec{1}{2}, \wvec = \twovec{-2}{-4}\text{.}
+\end{equation*}
+</div>
+<p id="INSERT-SPAN1">SPAN1</p>
+<ol id="p-189" class="lower-alpha">
+<li id="li-150">
+<p id="p-190">What vector is the linear combination of \(\vvec\) and \(\wvec\) with weights:</p>
+<ul class="disc">
+<li id="li-151"><p id="p-191">\(a = 2\) and \(b=0\text{?}\)</p></li>
+<li id="li-152"><p id="p-192">\(a = 1\) and \(b=1\text{?}\)</p></li>
+<li id="li-153"><p id="p-193">\(a = 0\) and \(b=-1\text{?}\)</p></li>
+</ul>
+</li>
+<li id="li-154"><p id="p-194">Can the vector \(\twovec{2}{4}\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  Is the vector \(\twovec{2}{4}\) in the span of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+<li id="li-155"><p id="p-195">Can the vector \(\twovec{3}{0}\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  Is the vector \(\twovec{3}{0}\) in the span of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+<li id="li-156"><p id="p-196">Describe the set of vectors in the span of \(\vvec\) and \(\wvec\text{.}\)</p></li>
+<li id="li-157">
+<p id="p-197">For what vectors \(\bvec\) does the equation</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{rr} 1 \amp -2 \\ 2 \amp -4
+\end{array}\right] \xvec = \bvec
+\end{equation*}
+</div>
+<p class="continuation">have a solution?</p>
+</li>
+</ol></article>. <article class="activity project-like" id="activity-40"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-198">We will now look at an example where</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec = \twovec{2}{1}, \wvec = \twovec{1}{2}\text{.}
+\end{equation*}
+</div>
+<p id="INSERT-SPAN2">SPAN2</p>
+<ol id="p-200" class="lower-alpha">
+<li id="li-158">
+<p id="p-201">What vector is the linear combination of \(\vvec\) and \(\wvec\) with weights:</p>
+<ul class="disc">
+<li id="li-159"><p id="p-202">\(a = 2\) and \(b=0\text{?}\)</p></li>
+<li id="li-160"><p id="p-203">\(a = 1\) and \(b=1\text{?}\)</p></li>
+<li id="li-161"><p id="p-204">\(a = 0\) and \(b=-1\text{?}\)</p></li>
+</ul>
+</li>
+<li id="li-162"><p id="p-205">Can the vector \(\twovec{-2}{2}\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  Is the vector \(\twovec{-2}{2}\) in the span of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+<li id="li-163"><p id="p-206">Can the vector \(\twovec{3}{0}\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  Is the vector \(\twovec{3}{0}\) in the span of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+<li id="li-164"><p id="p-207">Describe the set of vectors in the span of \(\vvec\) and \(\wvec\text{.}\)</p></li>
+<li id="li-165">
+<p id="p-208">For what vectors \(\bvec\) does the equation</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{rr} 2 \amp 1 \\ 1 \amp 2
+\end{array}\right] \xvec = \bvec
+\end{equation*}
+</div>
+<p class="continuation">have a solution?</p>
+</li>
+</ol></article><p id="p-209">In the next couple of activities, we will look at the span of sets of vectors in \(\real^3\text{.}\)</p>
+<article class="activity project-like" id="activity-41"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h6>
+<ol id="p-210" class="lower-alpha">
+<li id="li-166"><p id="p-211">Suppose \(v=\threevec{1}{2}{1}\text{.}\)  Give a written description of \(\laspan{v}\) and a rough sketch of it. <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/coordinates-3d.svg" role="img" class="contained" alt=""></div></div></div></p></li>
+<li id="li-167">
+<p id="p-212">Consider now the two vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\evec_1 = \threevec{1}{0}{0},
+\evec_2 = \threevec{0}{1}{0}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Sketch the vectors.  Then give a written description of \(\laspan{\evec_1,\evec_2}\) and a rough sketch of it. <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/coordinates-3d.svg" role="img" class="contained" alt=""></div></div></div></p>
+</li>
+<li id="li-168">
+<p id="p-213">Let's now look at this algebraically by writing write \(\bvec = \threevec{b_1}{b_2}{b_3}\text{.}\)  Determine the conditions on \(b_1\text{,}\) \(b_2\text{,}\) and \(b_3\) so that \(\bvec\) is in \(\laspan{\evec_1,\evec_2}\) by considering the linear system</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{rr}
+\evec_1 \amp \evec_2 \\
+\end{array}\right]
+\xvec =
+\bvec
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1 \\
+0 \amp 0 \\
+\end{array}\right]
+\xvec =
+\threevec{b_1}{b_2}{b_3}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Be able to explain how this relates to your sketch of \(\laspan{\evec_1,\evec_2}\text{.}\)</p>
+</li>
+</ol></article><article class="activity project-like" id="activity-42"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-214">Consider the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec_1 = \threevec{1}{1}{-1},
+\vvec_2 = \threevec{0}{2}{1}\text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-169"><p id="p-215">Is the vector \(\bvec=\threevec{1}{-2}{4}\) in \(\laspan{\vvec_1,\vvec_2}\text{?}\) <div class="sagecell-sage" id="sage-12"><script type="text/x-sage">
+</script></div></p></li>
+<li id="li-170"><p id="p-216">Is the vector \(\bvec=\threevec{-2}{0}{3}\) in \(\laspan{\vvec_1,\vvec_2}\text{?}\) <div class="sagecell-sage" id="sage-13"><script type="text/x-sage">
+</script></div></p></li>
+<li id="li-171"><p id="p-217">Give a written description of \(\laspan{\vvec_1,\vvec_2}\text{.}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-43"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-218">Consider the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec_1 = \threevec{1}{1}{-1},
+\vvec_2 = \threevec{0}{2}{1},
+\vvec_3 = \threevec{1}{-2}{4}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Form the matrix \(\left[\begin{array}{rrrr} \vvec_1 \amp \vvec_2
+\amp \vvec_3 \end{array}\right]\) and find its reduced row echelon form. <div class="sagecell-sage" id="sage-14"><script type="text/x-sage">
+</script></div> What does this tell you about \(\laspan{\vvec_1,\vvec_2,\vvec_3}\text{?}\)</p>
+<ol class="lower-alpha">
+<li id="li-172"><p id="p-derived-li-172">\(\laspan{\vvec_1,\vvec_2,\vvec_3}=\laspan{\vvec_1,\vvec_2}\text{.}\)</p></li>
+<li id="li-173"><p id="p-derived-li-173">\(\laspan{\vvec_1,\vvec_2,\vvec_3}=\laspan{\vvec_2,\vvec_3}\text{.}\)</p></li>
+<li id="li-174"><p id="p-derived-li-174">\(\laspan{\vvec_1,\vvec_2,\vvec_3}=\laspan{\vvec_1}\text{.}\)</p></li>
+<li id="li-175"><p id="p-derived-li-175">\(\laspan{\vvec_1,\vvec_2,\vvec_3}=\real^3\text{.}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-44"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
+</h6>
+<ol id="p-219" class="lower-alpha">
+<li id="li-176"><p id="p-220">If a set of vectors \(\vvec_1,\vvec_2,\ldots,\vvec_n\) spans \(\real^3\text{,}\) what can you say about the pivots of the matrix \(\left[\begin{array}{rrrr}
+\vvec_1\amp\vvec_2\amp\ldots\amp\vvec_n
+\end{array}\right]\text{?}\)</p></li>
+<li id="li-177"><p id="p-221">What is the smallest number of vectors such that \(\laspan{\vvec_1,\vvec_2,\ldots,\vvec_n} = \real^3\text{?}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-45"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-222">Let \(\vec{v}_1, \vec{v}_2, \vec{v}_3 \in \IR^7\) be three vectors, and suppose \(\vec{w}\) is another vector with \(\vec{w} \in \vspan \left\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\}\text{.}\) What can you conclude about \(\vspan \left\{ \vec{w}, \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \text{?}\)</p>
+<ol class="lower-alpha">
+<li id="li-178"><p id="p-derived-li-178">\(\vspan \left\{ \vec{w}, \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \) is larger than \(\vspan \left\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \text{.}\)</p></li>
+<li id="li-179"><p id="p-derived-li-179">\(\vspan \left\{ \vec{w}, \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\}  = \vspan \left\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \text{.}\)</p></li>
+<li id="li-180"><p id="p-derived-li-180">\(\vspan \left\{ \vec{w}, \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \) is smaller than \(\vspan \left\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \right\} \text{.}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-46"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
+</h6>
+<div class="introduction" id="introduction-6"><p id="p-223">The vector \(\left[\begin{array}{c}-1\\-6\\1\end{array}\right]\) belongs to \(\vspan\left\{\left[\begin{array}{c}1\\0\\-3\end{array}\right],
+\left[\begin{array}{c}-1\\-3\\2\end{array}\right]\right\}\) exactly when there exists a solution to the vector equation \(x_1\left[\begin{array}{c}1\\0\\-3\end{array}\right]+
+x_2\left[\begin{array}{c}-1\\-3\\2\end{array}\right]
+=\left[\begin{array}{c}-1\\-6\\1\end{array}\right]\text{.}\)</p></div>
+<article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-224">Reinterpret this vector equation as a system of linear equations.</p></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-225">Find its solution set, using technology to find \(\RREF\) of its corresponding augmented matrix.</p></article><article class="task exercise-like" id="task-18"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-226">Given this solution set, does \(\left[\begin{array}{c}-1\\-6\\1\end{array}\right]\) belong to \(\vspan\left\{\left[\begin{array}{c}1\\0\\-3\end{array}\right],
+\left[\begin{array}{c}-1\\-3\\2\end{array}\right]\right\}\text{?}\)</p></article></article><article class="activity project-like" id="activity-47"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span>
+</h6>
+<p id="p-227">Determine if \(\left[\begin{array}{c}-1\\-9\\0\end{array}\right]\) belongs to \(\vspan\left\{\left[\begin{array}{c}1\\0\\-3\end{array}\right],
+\left[\begin{array}{c}-1\\-3\\2\end{array}\right]\right\}\) by solving an appropriate vector equation.</p></article></section></div></main>
+</div>
+</body>
+</html>

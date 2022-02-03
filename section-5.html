@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-03T13:28:03-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Section 2.1</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(    \newcommand{\avec}{{\mathbf a}}
+    \newcommand{\bvec}{{\mathbf b}}
+    \newcommand{\cvec}{{\mathbf c}}
+    \newcommand{\dvec}{{\mathbf d}}
+    \newcommand{\dtil}{\widetilde{\mathbf d}}
+    \newcommand{\evec}{{\mathbf e}}
+    \newcommand{\fvec}{{\mathbf f}}
+    \newcommand{\nvec}{{\mathbf n}}
+    \newcommand{\pvec}{{\mathbf p}}
+    \newcommand{\qvec}{{\mathbf q}}
+    \newcommand{\svec}{{\mathbf s}}
+    \newcommand{\tvec}{{\mathbf t}}
+    \newcommand{\uvec}{{\mathbf u}}
+    \newcommand{\vvec}{{\mathbf v}}
+    \newcommand{\wvec}{{\mathbf w}}
+    \newcommand{\xvec}{{\mathbf x}}
+    \newcommand{\yvec}{{\mathbf y}}
+    \newcommand{\zvec}{{\mathbf z}}
+    \newcommand{\rvec}{{\mathbf r}}
+    \newcommand{\mvec}{{\mathbf m}}
+    \newcommand{\zerovec}{{\mathbf 0}}
+    \newcommand{\onevec}{{\mathbf 1}}
+    \newcommand{\real}{{\mathbb R}}
+    \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+    \end{array}\right]}
+    \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+    \end{array}\right]}
+    \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+    \end{array}\right]}
+    \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+    \end{array}\right]}
+    \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+    \end{array}\right]}
+    \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+    \end{array}\right]}
+    \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+    #4 \\ #5 \\ \end{array}\right]}
+    \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+    #4 \\ #5 \\ \end{array}\right]}
+    \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+    \newcommand{\laspan}[1]{\text{Span}\{#1\}}
+    \newcommand{\bcal}{{\cal B}}
+    \newcommand{\ccal}{{\cal C}}
+    \newcommand{\scal}{{\cal S}}
+    \newcommand{\wcal}{{\cal W}}
+    \newcommand{\ecal}{{\cal E}}
+    \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+    \newcommand{\gray}[1]{\color{gray}{#1}}
+    \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+    \newcommand{\rank}{\text{rank}}
+    \newcommand{\row}{\text{Row}}
+    \newcommand{\col}{\text{Col}}
+    \renewcommand{\row}{\text{Row}}
+    \newcommand{\nul}{\text{Nul}}
+    \newcommand{\var}{\text{Var}}
+    \newcommand{\corr}{\text{corr}}
+    \newcommand{\len}[1]{\left|#1\right|}
+    \newcommand{\bbar}{\overline{\bvec}}
+    \newcommand{\bhat}{\widehat{\bvec}}
+    \newcommand{\bperp}{\bvec^\perp}
+    \newcommand{\xhat}{\widehat{\xvec}}
+    \newcommand{\vhat}{\widehat{\vvec}}
+    \newcommand{\uhat}{\widehat{\uvec}}
+    \newcommand{\what}{\widehat{\wvec}}
+    \newcommand{\Sighat}{\widehat{\Sigma}}
+    \newcommand{\circledNumber}[1]{\boxed{#1}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IC}{\mathbb{C}}
+\renewcommand{\P}{\mathcal{P}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\RREF}{\operatorname{RREF}}
+\newcommand{\vspan}{\operatorname{span}}
+\newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setBuilder}[2]{\left\{#1\,\middle|\,#2\right\}}
+\newcommand{\unknown}{\,{\color{gray}?}\,}
+\newcommand{\drawtruss}[2][1]{
+\begin{tikzpicture}[scale=#1, every node/.style={scale=#1}]
+\draw (0,0) node[left,magenta]{C} -- 
+      (1,1.71) node[left,magenta]{A} -- 
+      (2,0) node[above,magenta]{D} -- cycle;
+\draw (2,0) -- 
+      (3,1.71) node[right,magenta]{B} -- 
+      (1,1.71) -- cycle;
+\draw (3,1.71) -- (4,0) node[right,magenta]{E} -- (2,0) -- cycle;
+\draw[blue] (0,0) -- (0.25,-0.425) -- (-0.25,-0.425) -- cycle;
+\draw[blue] (4,0) -- (4.25,-0.425) -- (3.75,-0.425) -- cycle;
+\draw[thick,red,-&gt;] (2,0) -- (2,-0.75);
+#2
+\end{tikzpicture}
+}
+\newcommand{\trussNormalForces}{
+\draw [thick, blue,-&gt;] (0,0) -- (0.5,0.5);
+\draw [thick, blue,-&gt;] (4,0) -- (3.5,0.5);
+}
+\newcommand{\trussCompletion}{
+\trussNormalForces
+\draw [thick, magenta,&lt;-&gt;] (0.4,0.684) -- (0.6,1.026);
+\draw [thick, magenta,&lt;-&gt;] (3.4,1.026) -- (3.6,0.684);
+\draw [thick, magenta,&lt;-&gt;] (1.8,1.71) -- (2.2,1.71);
+\draw [thick, magenta,-&gt;] (1.6,0.684) -- (1.5,0.855);
+\draw [thick, magenta,&lt;-] (1.5,0.855) -- (1.4,1.026);
+\draw [thick, magenta,-&gt;] (2.4,0.684) -- (2.5,0.855);
+\draw [thick, magenta,&lt;-] (2.5,0.855) -- (2.6,1.026);
+}
+\newcommand{\trussCForces}{
+\draw [thick, blue,-&gt;] (0,0) -- (0.5,0.5);
+\draw [thick, magenta,-&gt;] (0,0) -- (0.4,0.684);
+\draw [thick, magenta,-&gt;] (0,0) -- (0.5,0);
+}
+\newcommand{\trussStrutVariables}{
+\node[above] at (2,1.71) {\(x_1\)};
+\node[left] at (0.5,0.866) {\(x_2\)};
+\node[left] at (1.5,0.866) {\(x_3\)};
+\node[right] at (2.5,0.866) {\(x_4\)};
+\node[right] at (3.5,0.866) {\(x_5\)};
+\node[below] at (1,0) {\(x_6\)};
+\node[below] at (3,0) {\(x_7\)};
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ula.html"><span class="title">TBIL Activities for Understanding Linear Algebra</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="TBILch2.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="TBILch2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="TBILch2.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="TBILch2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="TBILch1.html" data-scroll="TBILch1"><span class="codenumber">1</span> <span class="title">TBIL Activities: Systems of Equations</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1">Section 1.1</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Section 1.2</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Section 1.3</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Section 1.4</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TBILch2.html" data-scroll="TBILch2"><span class="codenumber">2</span> <span class="title">TBIL Activities: Vectors, Matrices, and Linear Combinations</span></a><ul>
+<li><a href="section-5.html" data-scroll="section-5" class="active">Section 2.1</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Section 2.2</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Section 2.3</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Section 2.4</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-5"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Section 2.1</span>
+</h2>
+<article class="activity project-like" id="activity-26"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-104">Suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec = \left[\begin{array}{r} 3 \\ 1 \end{array}
+\right],
+\wvec = \left[\begin{array}{r} -1 \\ 2 \end{array}
+\right].
+\end{equation*}
+</div>
+<ol id="p-105" class="lower-alpha">
+<li id="li-78">
+<p id="p-106">Find expressions for the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cccc}
+\vvec, \amp 2\vvec, \amp -\vvec, \amp -2\vvec, \\
+\wvec, \amp 2\wvec, \amp -\wvec, \amp -2\wvec\text{.} \\
+\end{array}
+\end{equation*}
+</div>
+<p class="continuation">and sketch them in the \(xy\) plane. <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/empty-6.svg" role="img" class="contained" alt=""></div></div></div></p>
+</li>
+<li id="li-79"><p id="p-107">What geometric effect does scalar multiplication by a positive number have on a vector?  (a) preserves the length, changes the direction, (b) preserves the direction, changes the length, (c) changes the length and the direction.</p></li>
+<li id="li-80"><p id="p-108">What geometric effect does scalar multiplication by a negative number have on a vector?  (a) preserves the length, changes the direction, (b) preserves the direction, changes the length, (c) changes the length and the direction.</p></li>
+<li id="li-81"><p id="p-109">Sketch the vectors \(\vvec, \wvec, \vvec + \wvec\) in the \(xy\) plane. <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/empty-6.svg" role="img" class="contained" alt=""></div></div></div></p></li>
+<li id="li-82">
+<p id="p-110">Consider vectors that have the form \(\vvec +
+a\wvec\) where \(a\) is any scalar.  Sketch a few of these vectors when, say, \(a = -2, -1, 0, 1, \) and \(2\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/empty-6.svg" role="img" class="contained" alt=""></div></div></div> An appropriate geometric description for this set of vectors would be</p>
+<ol class="lower-alpha">
+<li id="li-83"><p id="p-111">a line through \(\vvec\) parallel to \(\wvec\text{.}\)</p></li>
+<li id="li-84"><p id="p-112">a line through \(\wvec\) parallel to \(\vvec\text{.}\)</p></li>
+<li id="li-85"><p id="p-113">a line through \((0,0)\) parallel to \(\vvec+\wvec\text{.}\)</p></li>
+</ol>
+</li>
+<li id="li-86">
+<p id="p-114">If \(a\) and \(b\) are two scalars, then the vector</p>
+<div class="displaymath">
+\begin{equation*}
+a \vvec + b \wvec 
+\end{equation*}
+</div>
+<p class="continuation">is called a linear combination of the vectors \(\vvec\) and \(\wvec\text{.}\)  Find the vector that is the linear combination when \(a = -2\) and \(b = 1\text{.}\)</p>
+</li>
+<li id="li-87"><p id="p-115">Can the vector \(\left[\begin{array}{r} -31 \\ 37
+\end{array}\right]\) be represented as a linear combination of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-27"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-116">In this activity, we will look at linear combinations of a pair of vectors,</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec = \left[\begin{array}{r} 2 \\ 1 \end{array}\right],
+\wvec = \left[\begin{array}{r} 1 \\ 2 \end{array}\right]
+\end{equation*}
+</div>
+<p class="continuation">with weights \(a\) and \(b\text{.}\)</p>
+<p id="INSERT">LINEAR-COMBINATIONS</p>
+<p id="p-118">Go to Applet in Activity 2.1.2 in Understanding Linear Algebra</p>
+<ol class="lower-alpha">
+<li id="li-88"><p id="p-119">The weight \(b\) is initially set to 0.  Explain what happens as you vary \(a\) with \(b=0\text{?}\)  How is this related to scalar multiplication?</p></li>
+<li id="li-89"><p id="p-120">What is the linear combination of \(\vvec\) and \(\wvec\) when \(a = 1\) and \(b=-2\text{?}\)  You may find this result using the diagram, but you should also verify it by computing the linear combination.</p></li>
+<li id="li-90">
+<p id="p-121">The vectors that arise when the weight \(b\) is set to 1 and \(a\) is varied is</p>
+<ol class="lower-alpha">
+<li id="li-91"><p id="p-122">a line through \(\vvec\) parallel to \(\wvec\text{.}\)</p></li>
+<li id="li-92"><p id="p-123">a line through \(\wvec\) parallel to \(\vvec\text{.}\)</p></li>
+<li id="li-93"><p id="p-124">a line through \((0,0)\) parallel to \(\vvec+\wvec\text{.}\)</p></li>
+</ol>
+</li>
+<li id="li-94"><p id="p-125">Can the vector \(\left[\begin{array}{r} 0 \\ 0 \end{array} \right]\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  If so, what are weights \(a\) and \(b\text{?}\)</p></li>
+<li id="li-95"><p id="p-126">Can the vector \(\left[\begin{array}{r} 3 \\ 0 \end{array} \right]\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  If so, what are weights \(a\) and \(b\text{?}\)</p></li>
+<li id="li-96"><p id="p-127">Verify the result from the previous part by algebraically finding the weights \(a\) and \(b\) that form the linear combination \(\left[\begin{array}{r} 3 \\ 0 \end{array} \right]\text{.}\)</p></li>
+<li id="li-97"><p id="p-128">Can the vector \(\left[\begin{array}{r} 1.3 \\ -1.7 \end{array} \right]\) be expressed as a linear combination of \(\vvec\) and \(\wvec\text{?}\)  What about the vector \(\left[\begin{array}{r} 15.2 \\ 7.1 \end{array} \right]\text{?}\)</p></li>
+<li id="li-98"><p id="p-129">Are there any two-dimensional vectors that cannot be expressed as linear combinations of \(\vvec\) and \(\wvec\text{?}\)</p></li>
+</ol></article><article class="activity project-like" id="activity-28"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h6>
+<ol id="p-130" class="lower-alpha">
+<li id="li-99">
+<p id="p-131">Given the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec_1 = \left[\begin{array}{r} 4 \\ 0 \\ 2 \\ 1
+\end{array} \right], 
+\vvec_2 = \left[\begin{array}{r} 1 \\ -3 \\ 3 \\ 1
+\end{array} \right], 
+\vvec_3 = \left[\begin{array}{r} -2 \\ 1 \\ 1 \\ 0
+\end{array} \right], 
+\bvec   = \left[\begin{array}{r} 0 \\ 1 \\ 2 \\ -2
+\end{array} \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we ask if \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{.}\)  Rephrase this question by writing a linear system for the weights \(c_1\text{,}\) \(c_2\text{,}\) and \(c_3\) and use the Sage cell below to answer this question. <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">
+</script></div></p>
+</li>
+<li id="li-100">
+<p id="p-132">Consider the following linear system.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{alignedat}{4}
+3x_1 \amp {}+{} \amp 2x_2 \amp {}-{} x_3 \amp {}={} \amp 4 \\
+x_1 \amp \amp \amp {}+{} 2x_3 \amp {}={} \amp 0 \\
+-x_1 \amp {}-{} \amp x_2 \amp {}+{} 3x_3 \amp {}={} \amp 1
+\\
+\end{alignedat}
+\end{equation*}
+</div>
+<p class="continuation">Identify vectors \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) \(\vvec_3\text{,}\) and \(\bvec\) and rephrase the question "Is this linear system consistent?" by asking "Can \(\bvec\) be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{?}\)"</p>
+</li>
+</ol></article><article class="activity project-like" id="activity-29"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h6>
+<ol id="p-133" class="lower-alpha">
+<li id="li-101">
+<p id="p-134">Consider the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec_1 = \left[\begin{array}{r} 0 \\ -2 \\ 1 \\
+\end{array} \right], 
+\vvec_2 = \left[\begin{array}{r} 1 \\ 1 \\ -1 \\
+\end{array} \right], 
+\vvec_3 = \left[\begin{array}{r} 2 \\ 0 \\ -1 \\
+\end{array} \right], 
+\bvec   = \left[\begin{array}{r} -1 \\ 3 \\ -1 \\
+\end{array} \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Which statement is the most accurate for \(\bvec\text{?}\)</p>
+<ol class="lower-alpha">
+<li id="li-102"><p id="p-135">The vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in exactly one way.</p></li>
+<li id="li-103"><p id="p-136">The vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in more than one way.</p></li>
+<li id="li-104"><p id="p-137">The vector \(\bvec\) cannot be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{.}\)</p></li>
+</ol>
+<p class="continuation"><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">
+</script></div></p>
+</li>
+<li id="li-105">
+<p id="p-138">Considering the vectors \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) from the previous part, determine the most accurate statement.</p>
+<ol class="lower-alpha">
+<li id="li-106"><p id="p-139">Every three dimensional vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in exactly one way.</p></li>
+<li id="li-107"><p id="p-140">Every three dimensional vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in more than one way.</p></li>
+<li id="li-108"><p id="p-141">There are vectors \(\bvec\) that cannot be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{.}\)</p></li>
+</ol>
+<p class="continuation">Be able to explain how the pivot positions of the matrix \(\left[\begin{array}{rrr} \vvec_1 \amp
+\vvec_2 \amp \vvec_3 \end{array} \right]\) help answer this question.</p>
+</li>
+</ol></article><article class="activity project-like" id="activity-30"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h6>
+<ol id="p-142" class="lower-alpha">
+<li id="li-109">
+<p id="p-143">Consider the vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vvec_1 = \left[\begin{array}{r} 0 \\ -2 \\ 1 \\
+\end{array} \right], 
+\vvec_2 = \left[\begin{array}{r} 1 \\ 1 \\ -1 \\
+\end{array} \right], 
+\vvec_3 = \left[\begin{array}{r} 1 \\ -1 \\ -2 \\
+\end{array} \right], 
+\bvec   = \left[\begin{array}{r} 0 \\ 8 \\ -4 \\
+\end{array} \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Which statement is the most accurate for \(\bvec\text{?}\)</p>
+<ol class="lower-alpha">
+<li id="li-110"><p id="p-144">The vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in exactly one way.</p></li>
+<li id="li-111"><p id="p-145">The vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in more than one way.</p></li>
+<li id="li-112"><p id="p-146">The vector \(\bvec\) cannot be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{.}\)</p></li>
+</ol>
+<p class="continuation"><div class="sagecell-sage" id="sage-3"><script type="text/x-sage">
+</script></div></p>
+</li>
+<li id="li-113">
+<p id="p-147">Considering the vectors \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) from the previous part, determine the most accurate statement.</p>
+<ol class="lower-alpha">
+<li id="li-114"><p id="p-148">Every three dimensional vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in exactly one way.</p></li>
+<li id="li-115"><p id="p-149">Every three dimensional vector \(\bvec\) can be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\) in more than one way.</p></li>
+<li id="li-116"><p id="p-150">There are vectors \(\bvec\) that cannot be expressed as a linear combination of \(\vvec_1\text{,}\) \(\vvec_2\text{,}\) and \(\vvec_3\text{.}\)</p></li>
+</ol>
+<p class="continuation">Be able to explain how the pivot positions of the matrix \(\left[\begin{array}{rrr} \vvec_1 \amp
+\vvec_2 \amp \vvec_3 \end{array} \right]\) help answer this question.</p>
+</li>
+</ol></article></section></div></main>
+</div>
+</body>
+</html>
